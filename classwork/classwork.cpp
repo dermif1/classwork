@@ -18,6 +18,12 @@ string genLine(char symb, int count) {
     return res;
 }
 
+void max(int num1=0, int num2=-2) {
+    (num1 < num2) ? cout << num2 << endl : cout << num1 << endl;
+}
+
+// Prototype
+int maxReturn(int num1 = 0, int num2 = -2);
 
 int main()
 {
@@ -25,14 +31,24 @@ int main()
     locale::global(std::locale("uk_UA.utf8"));
 
     //18.03
-    char symb;
-    int count;
-    cout << "Введіть символ: ";
-    cin >> symb;
-    cout << "Введіть кількість символ: ";
-    cin >> count;
-    cout << endl;
-    genLineVoid(symb, count);
-    cout<<genLine(symb, count)<<endl;
+    //char symb;
+    //int count;
+    //cout << "Введіть символ: ";
+    //cin >> symb;
+    //cout << "Введіть кількість символ: ";
+    //cin >> count;
+    //cout << endl;
+    //genLineVoid(symb, count);
+    //cout<<genLine(symb, count)<<endl;
+    
+    max();
+    max(10, 15);
+    cout << maxReturn() << endl;
+    cout << maxReturn(10, 15) << endl;
+
     return 0;
+}
+
+int maxReturn(int num1, int num2) {
+    return (num1 < num2) ? num2 : num1;
 }
