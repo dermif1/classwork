@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -9,13 +10,14 @@ void genLineVoid(char symb, int count) {
     cout << endl;
 }
 
-int genLineInt(char symb, int count) {
+string genLine(char symb, int count) {
+    string res = "";
     for (int i = 0; i < count; ++i) {
-        cout << symb;
+        res += symb;
     }
-    cout << endl;
-    return 0;
+    return res;
 }
+
 
 int main()
 {
@@ -29,7 +31,8 @@ int main()
     cin >> symb;
     cout << "Введіть кількість символ: ";
     cin >> count;
+    cout << endl;
     genLineVoid(symb, count);
-    genLineInt(symb, count);
+    cout<<genLine(symb, count)<<endl;
     return 0;
 }
