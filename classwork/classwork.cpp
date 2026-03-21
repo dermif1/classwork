@@ -10,6 +10,10 @@ void genLineVoid(char symb, int count) {
     cout << endl;
 }
 
+bool ispositive(int numb) {
+    return (numb > 0);
+}
+
 string genLine(char symb, int count) {
     string res = "";
     for (int i = 0; i < count; ++i) {
@@ -41,10 +45,13 @@ int main()
     //genLineVoid(symb, count);
     //cout<<genLine(symb, count)<<endl;
     
-    max();
-    max(10, 15);
-    cout << maxReturn() << endl;
-    cout << maxReturn(10, 15) << endl;
+    //max();
+    //max(10, 15);
+    //cout << maxReturn() << endl;
+    //cout << maxReturn(10, 15) << endl;
+
+    // 21.03
+    cout<<ispositive(-1);
 
     return 0;
 }
